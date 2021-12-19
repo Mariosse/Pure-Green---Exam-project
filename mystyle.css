@@ -1,0 +1,493 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+/*   NAV BAR    */
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #000000;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 700;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #26d180;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: rgb(0, 0, 0);
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: #26d180;
+  }
+}
+
+/*   BUTTONS    */
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Barlow Condensed", sans-serif;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: black;
+  border-radius: 20px;
+}
+
+/*    HOME MAIN TEXT     */
+.container1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  padding-bottom: 3rem;
+}
+.maintext {
+  flex: 1;
+  color: #1b1b1b;
+  font-size: 190px;
+  font-weight: 600;
+  font-family: 'Barlow Condensed', sans-serif;
+  text-align: center;
+  padding-top: 5rem;
+}
+.subtext {
+  color: #1b1b1b;
+  font-size: 50px;
+  font-weight: 600;
+  font-family: 'Shadows Into Light', cursive;
+  text-align: center;
+}
+
+/*     HOME CONTENT   */
+.responsiveimg1{
+  display:flex;
+  width: 100%;
+  padding-top: 2rem;
+}
+.responsiveimg3{
+  display:flex;
+  width: 100%;
+}
+.container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.teainfo {
+  color: #000000;
+  font-size: 25px;
+  font-family: 'Barlow Condensed', sans-serif;
+  text-align: center;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+}
+.flavourtext{
+color: #000000;
+font-size: 60px;
+font-family: 'Barlow Condensed', sans-serif;
+text-align: center;
+}
+a {
+  color: #080808;
+  text-decoration: none;
+}
+
+/*   INSTA GRID    */
+.instatext{
+  color: #000000;
+  font-size: 60px;
+  font-family: 'Barlow Condensed', sans-serif;
+  text-align: center;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+}
+
+.text1{
+  color: #000000;
+  font-size: 40px;
+  font-family: 'Barlow Condensed', sans-serif;
+  text-align: center;
+  padding-bottom: 3rem;
+  padding-top: 2rem; 
+}
+
+.instacards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.card {
+  padding: 1rem;
+}
+
+@media (min-width: 700px) {
+  .instacards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 960px) {
+  .instacards { grid-template-columns: repeat(3, 1fr); }
+}
+
+
+/*   WELLBEING CONTENT  */
+.labeltext{
+  color: #000000;
+  font-size: 80px;
+  font-family: 'Barlow Condensed', sans-serif;
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+.subtext2{
+  color: #1b1b1b;
+  font-size: 40px;
+  font-weight: 600;
+  font-family: 'Shadows Into Light', cursive;
+  text-align: center;
+}
+.containerwellbeing{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  align-items: center;
+}
+.wellbeingimg{
+  display:flex;
+}
+.wellbeingtext{
+  color: #000000;
+  font-size: 35px;
+  font-family: 'Barlow Condensed', sans-serif;
+  text-align: center; 
+  padding-top: 3rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.wellbeinglabel{
+  color: #000000;
+  font-size: 70px;
+  font-family: 'Barlow Condensed', sans-serif;
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+.wellbeingsub{
+  color: #000000;
+  font-size: 25px;
+  font-family: 'Barlow Condensed', sans-serif;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.subimage1{
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+/*    FLAVOUR CONTENT    */
+.product-container{
+  display:grid; 
+  grid-template-columns: auto auto;
+  grid-gap: 15px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.can{
+  display:grid;
+  height: auto;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.item2{
+  text-align: left;
+  padding-top: 8rem;
+  font-size: 35px;
+  font-family: 'Shadows into light', cursive;
+}
+.flavourcontainer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  align-items: center;
+}
+.responsiveimg{
+  display: flex;
+  width: 99%;
+}
+
+/*    ABOUT CONTENT    */
+.aboutcontainer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 5rem;
+}
+.aboutsubtext{
+  display: flex;
+  color: black;
+  font-size: 40px; 
+  font-family: 'Barlow Condensed', sans-serif;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.aboutcontainer2{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 5rem;
+}
+.abouttext{
+  display: flex;
+  color: black;
+  font-size: 100px; 
+  font-family: 'Barlow Condensed', sans-serif;
+  text-align: center;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+.aboutsubtext2{
+  display: flex;
+  color: black;
+  font-size: 25px; 
+  font-family: 'Barlow Condensed', sans-serif;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.responsiveimg2{
+  display:flex;
+  width: 50%;
+  align-content: center;
+}
+
+/*  FOOTER   */
+footer{
+  background: white;
+  padding: 90px 0;
+}
+
+.footer-container{
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+}
+
+.logo{
+  width: 160px;
+}
+
+.social-media{
+  margin: 20px 0;
+}
+
+.social-media a{
+  color: #000000;
+  margin-right: 25px;
+  font-size: 22px;
+  text-decoration: none;
+  transition: .3s linear;
+}
+
+.social-media a:hover{
+  color: #26d180;
+}
+
+.rights-text{
+  font-size: 26px;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.right-col h1{
+  font-size: 26px;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.border{
+  width: 100px;
+  height: 4px;
+  background: #26d180;
+  font-size: 20px;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.newsletter-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+}
+
+.txtb{
+  flex: 1;
+  padding: 18px 40px;
+  font-size: 16px;
+  color: #293043;
+  background: #ddd;
+  border: none;
+  font-weight: 700;
+  outline: none;
+  border-radius: 30px;
+  min-width: 260px;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.btn{
+  padding: 18px 40px;
+  font-size: 16px;
+  color: #f1f1f1;
+  background: #fc5c65;
+  border: none;
+  font-weight: 700;
+  outline: none;
+  border-radius: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: opacity .3s linear;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.btn:hover{
+  opacity: .7;
+}
+
+.page-content{
+  min-height: 100vh;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+@media screen and (max-width:700px){
+  .btn{
+    margin: 0;
+    width: 100%;
+    margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:960px) {
+  .footer-container{
+    max-width: 600px;
+  }
+  .right-col{
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .left-col{
+    width: 100%;
+    text-align: center;
+  }
+}
